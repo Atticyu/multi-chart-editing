@@ -1,0 +1,93 @@
+{
+  "version": "v3_operation_counterfactual",
+  "task_id": "synthetic_sample_920915",
+  "split": "synthetic",
+  "operation_count": 5,
+  "scorable_edit_operation_count": 5,
+  "valid_counterfactual_count": 5,
+  "all_edit_operations_valid": true,
+  "operations": [
+    {
+      "operation_index": 1,
+      "operation": "modify_style",
+      "operation_spec": {
+        "operation": "modify_style",
+        "scope": "all_charts"
+      },
+      "applicable": true,
+      "counterfactual_image": "op_001_without.png",
+      "changed_pixel_rate": 0.004316421012849584,
+      "mean_absolute_delta": 0.22390022675736962,
+      "valid_visual_effect": true,
+      "sha256": "687f0be6223485d0a02515df73631157031aa5228dad0eb4dc6c9ee631706d7f"
+    },
+    {
+      "operation_index": 2,
+      "operation": "change_axis_label",
+      "operation_spec": {
+        "operation": "change_axis_label",
+        "axis": "y",
+        "new_label": "Comparable value",
+        "scope": "chart_id",
+        "chart_id": "chart_1"
+      },
+      "applicable": true,
+      "counterfactual_image": "op_002_without.png",
+      "changed_pixel_rate": 0.0005224867724867725,
+      "mean_absolute_delta": 0.08820389266817838,
+      "valid_visual_effect": true,
+      "sha256": "eccbe0509c88b2635557b5fcaf48efe98622b044c6b4c06843b963e42c930c9e"
+    },
+    {
+      "operation_index": 3,
+      "operation": "change_axis_label",
+      "operation_spec": {
+        "operation": "change_axis_label",
+        "axis": "y",
+        "new_label": "Comparable value",
+        "scope": "chart_id",
+        "chart_id": "chart_2"
+      },
+      "applicable": true,
+      "counterfactual_image": "op_003_without.png",
+      "changed_pixel_rate": 0.0005224867724867725,
+      "mean_absolute_delta": 0.08820389266817838,
+      "valid_visual_effect": true,
+      "sha256": "052d7dfce4bafba448de7fb7e0e3f656375b611f1d2d635a9ec2b4dceae05b59"
+    },
+    {
+      "operation_index": 4,
+      "operation": "change_axis_label",
+      "operation_spec": {
+        "operation": "change_axis_label",
+        "axis": "y",
+        "new_label": "Comparable value",
+        "scope": "chart_id",
+        "chart_id": "chart_4"
+      },
+      "applicable": true,
+      "counterfactual_image": "op_004_without.png",
+      "changed_pixel_rate": 0.0005409108087679516,
+      "mean_absolute_delta": 0.09296359284454522,
+      "valid_visual_effect": true,
+      "sha256": "9fa312593cdbcb429c6a30946ff6fd6c667f0bf3afcc25c135120a03049bd165"
+    },
+    {
+      "operation_index": 5,
+      "operation": "change_axis_label",
+      "operation_spec": {
+        "operation": "change_axis_label",
+        "axis": "y",
+        "new_label": "Comparable value",
+        "scope": "chart_id",
+        "chart_id": "chart_5"
+      },
+      "applicable": true,
+      "counterfactual_image": "op_005_without.png",
+      "changed_pixel_rate": 0.0005409108087679516,
+      "mean_absolute_delta": 0.09296359284454522,
+      "valid_visual_effect": true,
+      "sha256": "b84f9046bf6a073d578af62e267392d0bb5f81d01a3d916db54202ae3c1e1864"
+    }
+  ]
+}

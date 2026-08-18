@@ -1,0 +1,55 @@
+{
+  "version": "v3_operation_counterfactual",
+  "task_id": "real_sample_001023",
+  "split": "real",
+  "operation_count": 3,
+  "scorable_edit_operation_count": 2,
+  "valid_counterfactual_count": 2,
+  "all_edit_operations_valid": true,
+  "operations": [
+    {
+      "operation_index": 1,
+      "operation": "add_reference_line",
+      "operation_spec": {
+        "operation": "add_reference_line",
+        "chart_id": "chart_3",
+        "y": "mean",
+        "label": "Reference mean",
+        "color": "purple",
+        "scope": "chart_id"
+      },
+      "applicable": true,
+      "counterfactual_image": "op_001_without.png",
+      "changed_pixel_rate": 0.0014374807250796696,
+      "mean_absolute_delta": 0.1358557779072291,
+      "valid_visual_effect": true,
+      "sha256": "8622e1b15e5d881a5fb7c91616fc31f959fe7eb0088d16034c4b0dc166deab24"
+    },
+    {
+      "operation_index": 2,
+      "operation": "set_y_scale",
+      "operation_spec": {
+        "operation": "set_y_scale",
+        "scale": "log",
+        "scope": "numeric_y_charts"
+      },
+      "applicable": true,
+      "counterfactual_image": "op_002_without.png",
+      "changed_pixel_rate": 0.08101291847993695,
+      "mean_absolute_delta": 5.329729066008749,
+      "valid_visual_effect": true,
+      "sha256": "bfbf8f756e6aab3aa878acd36d56fbd727bbbbb07327cc8ee8d676b923483c7f"
+    },
+    {
+      "operation_index": 3,
+      "operation": "preserve_unrelated_charts",
+      "operation_spec": {
+        "operation": "preserve_unrelated_charts",
+        "scope": "charts_not_in_dataset",
+        "dataset_id": "epa_annual_aqi_state"
+      },
+      "applicable": false,
+      "reason": "preservation operation is scored on the non-edit region"
+    }
+  ]
+}

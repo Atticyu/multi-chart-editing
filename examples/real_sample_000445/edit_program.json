@@ -1,0 +1,36 @@
+{
+  "instruction_type": "multi_step",
+  "operations": [
+    {
+      "operation": "modify_color",
+      "target": "Guinea",
+      "color": "red",
+      "scope": "relation_tag",
+      "relation_tag": "country_or_region_relation"
+    },
+    {
+      "operation": "rename_label",
+      "target": "Guinea",
+      "new_label": "Guinea (updated)",
+      "scope": "relation_tag",
+      "relation_tag": "country_or_region_relation"
+    },
+    {
+      "operation": "add_event_marker",
+      "x": 1925,
+      "label": "Event 1925",
+      "color": "red",
+      "scope": "time_series_charts"
+    }
+  ],
+  "instruction": "Within the related country or region panels, recolor Guinea to red. In the related country or region panels, replace the label Guinea with Guinea (updated). Mark 1925 with a red vertical line labeled \"Event 1925\" in all time-series panels. Make the scoped edits consistently across the related charts without disturbing the rest of the dashboard.",
+  "num_operations": 3,
+  "max_steps": 6,
+  "source_dashboard_id": "dashboard_0030",
+  "sample_id": "sample_000445",
+  "scope_notes": [
+    "Target charts are determined by operation scope and dashboard relation graph.",
+    "Unrelated charts should remain visually and semantically unchanged."
+  ],
+  "raw_instruction": "Change Guinea to red in subplots linked by country_or_region_relation; rename Guinea to Guinea (updated) across subplots linked by country_or_region_relation; and add a red vertical marker at 1925 labeled \"Event 1925\" to all time-series charts. Make sure the edits are applied consistently across related subplots and unrelated subplots are preserved."
+}

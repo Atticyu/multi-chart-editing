@@ -1,0 +1,1 @@
+Within the related country or region panels, recolor Guinea to red. In the related country or region panels, replace the label Guinea with Guinea (updated). Mark 1925 with a red vertical line labeled "Event 1925" in all time-series panels. Make the scoped edits consistently across the related charts without disturbing the rest of the dashboard.

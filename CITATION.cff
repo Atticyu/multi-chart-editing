@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this benchmark or evaluator, please cite the accompanying paper."
+title: "Multi-Chart Editing with Executable Code: A Relation-Aware Benchmark"
+type: dataset
+repository: "https://github.com/Atticyu/multi-chart-editing"
+authors:
+  - family-names: "Anonymous"
+    given-names: "Authors"
+version: "1.0.0"
+keywords:
+  - chart editing
+  - chart-to-code
+  - multi-chart reasoning
+  - vision-language models

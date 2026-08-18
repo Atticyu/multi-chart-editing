@@ -1,0 +1,1 @@
+Add a purple reference line labeled "Reference mean" at the mean value in the third subplot. For charts with numeric y-values, display the y-axis on a logarithmic scale. Leave charts outside that scope unchanged.

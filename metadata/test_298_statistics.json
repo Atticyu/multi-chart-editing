@@ -1,0 +1,23 @@
+{
+  "task_count": 298,
+  "dashboard_cluster_count": 233,
+  "split": {
+    "synthetic": 240,
+    "real": 58
+  },
+  "instruction_type": {
+    "complex_relation": 48,
+    "multi_step": 89,
+    "multi_chart_relation": 52,
+    "single_step": 109
+  },
+  "chart_count": {
+    "2": 49,
+    "3": 50,
+    "4": 50,
+    "5": 50,
+    "6": 50,
+    "7": 49
+  },
+  "relation_applicable": 100
+}

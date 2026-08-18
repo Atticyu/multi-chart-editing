@@ -1,0 +1,1 @@
+Add a purple mean reference line labeled "Reference mean" to chart_3; set the y-axis to a log scale for charts with numeric y-axes; and keep charts outside the specified scope unchanged.

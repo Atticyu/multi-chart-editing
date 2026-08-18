@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+.env
+*.key
+*.pem
+reproduced_statistics/
+rendered/
+release_assets/
+*.zip

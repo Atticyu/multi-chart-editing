@@ -1,0 +1,62 @@
+{
+  "version": "v3_operation_counterfactual",
+  "task_id": "real_sample_000445",
+  "split": "real",
+  "operation_count": 3,
+  "scorable_edit_operation_count": 3,
+  "valid_counterfactual_count": 3,
+  "all_edit_operations_valid": true,
+  "operations": [
+    {
+      "operation_index": 1,
+      "operation": "modify_color",
+      "operation_spec": {
+        "operation": "modify_color",
+        "target": "Guinea",
+        "color": "red",
+        "scope": "relation_tag",
+        "relation_tag": "country_or_region_relation"
+      },
+      "applicable": true,
+      "counterfactual_image": "op_001_without.png",
+      "changed_pixel_rate": 0.03434607901961854,
+      "mean_absolute_delta": 4.46283535121514,
+      "valid_visual_effect": true,
+      "sha256": "abe742ae14241dacc0a7cf9a32e2897b73d1f6a163975deb4be5268a4cc3e40e"
+    },
+    {
+      "operation_index": 2,
+      "operation": "rename_label",
+      "operation_spec": {
+        "operation": "rename_label",
+        "target": "Guinea",
+        "new_label": "Guinea (updated)",
+        "scope": "relation_tag",
+        "relation_tag": "country_or_region_relation"
+      },
+      "applicable": true,
+      "counterfactual_image": "op_002_without.png",
+      "changed_pixel_rate": 0.0008858746926711799,
+      "mean_absolute_delta": 0.06395234122101884,
+      "valid_visual_effect": true,
+      "sha256": "634093366103ec4abfacf9777b341e8fd301e194cd788c77d6d730c7e25a7a3e"
+    },
+    {
+      "operation_index": 3,
+      "operation": "add_event_marker",
+      "operation_spec": {
+        "operation": "add_event_marker",
+        "x": 1925,
+        "label": "Event 1925",
+        "color": "red",
+        "scope": "time_series_charts"
+      },
+      "applicable": true,
+      "counterfactual_image": "op_003_without.png",
+      "changed_pixel_rate": 0.001158606924166298,
+      "mean_absolute_delta": 0.11460780768404544,
+      "valid_visual_effect": true,
+      "sha256": "0fcdfdc7c3a383d9be6df27b4176913342bdd95b37672b582e74b1760bc0673d"
+    }
+  ]
+}

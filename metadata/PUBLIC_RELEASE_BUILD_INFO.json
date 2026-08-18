@@ -1,0 +1,45 @@
+{
+  "source_release": "relation_aware_chart_to_code_dataset_release_v1_expanded_qc_v3_relation",
+  "public_release": "relation_aware_chart_to_code_dataset_public_v6_licensed",
+  "storage_mode": "hardlink_with_copy_fallback",
+  "linked_files": 37652,
+  "copied_files": 0,
+  "skipped_source_files": 802,
+  "excluded_dataset_ids": [
+    "vega_stocks"
+  ],
+  "excluded_sample_ids": [
+    "sample_000463",
+    "sample_000464",
+    "sample_000465",
+    "sample_000467",
+    "sample_000470",
+    "sample_003436",
+    "sample_003437",
+    "sample_003438",
+    "sample_003439",
+    "sample_003441",
+    "sample_003443",
+    "sample_003449",
+    "sample_003450"
+  ],
+  "excluded_dashboard_ids": [
+    "dashboard_0032",
+    "dashboard_0222"
+  ],
+  "public_counts": {
+    "accepted_samples": 4078,
+    "accepted_base_dashboards": 788,
+    "chart_type_count": 37,
+    "domain_count": 42,
+    "relation_aware_samples": 828,
+    "relation_aware_ratio": 0.203041
+  },
+  "real_evaluation_labels": 352,
+  "note": "Hard links are a local storage optimization. Archiving or copying the directory produces ordinary independent files.",
+  "project_licenses": {
+    "software": "Apache-2.0",
+    "benchmark_authored_data": "CC-BY-4.0",
+    "third_party_boundary": "Upstream terms remain controlling; see THIRD_PARTY_NOTICES.md."
+  }
+}

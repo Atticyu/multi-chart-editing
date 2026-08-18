@@ -1,0 +1,33 @@
+{
+  "instruction_type": "multi_step",
+  "operations": [
+    {
+      "operation": "add_reference_line",
+      "chart_id": "chart_3",
+      "y": "mean",
+      "label": "Reference mean",
+      "color": "purple",
+      "scope": "chart_id"
+    },
+    {
+      "operation": "set_y_scale",
+      "scale": "log",
+      "scope": "numeric_y_charts"
+    },
+    {
+      "operation": "preserve_unrelated_charts",
+      "scope": "charts_not_in_dataset",
+      "dataset_id": "epa_annual_aqi_state"
+    }
+  ],
+  "instruction": "Add a purple reference line labeled \"Reference mean\" at the mean value in the third subplot. For charts with numeric y-values, display the y-axis on a logarithmic scale. Leave charts outside that scope unchanged.",
+  "num_operations": 3,
+  "max_steps": 6,
+  "source_dashboard_id": "dashboard_0068",
+  "sample_id": "sample_001023",
+  "scope_notes": [
+    "Target charts are determined by operation scope and dashboard relation graph.",
+    "Unrelated charts should remain visually and semantically unchanged."
+  ],
+  "raw_instruction": "Add a purple mean reference line labeled \"Reference mean\" to chart_3; set the y-axis to a log scale for charts with numeric y-axes; and keep charts outside the specified scope unchanged."
+}

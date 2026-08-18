@@ -1,0 +1,171 @@
+{
+  "sample_id": "sample_001023",
+  "source_dashboard_id": "dashboard_0068",
+  "domain": "air_quality_environment",
+  "chart_count": 3,
+  "instruction": "Add a purple reference line labeled \"Reference mean\" at the mean value in the third subplot. For charts with numeric y-values, display the y-axis on a logarithmic scale. Leave charts outside that scope unchanged.",
+  "instruction_type": "multi_step",
+  "num_operations": 3,
+  "figure_level_operations": [],
+  "expected_affected_charts_union": [
+    "chart_1",
+    "chart_2",
+    "chart_3"
+  ],
+  "expected_preserved_charts": [],
+  "operation_labels": [
+    {
+      "operation_index": 1,
+      "operation": {
+        "operation": "add_reference_line",
+        "chart_id": "chart_3",
+        "y": "mean",
+        "label": "Reference mean",
+        "color": "purple",
+        "scope": "chart_id"
+      },
+      "touched_fields": [
+        "reference_annotation"
+      ],
+      "expected_affected_charts": [
+        "chart_3"
+      ],
+      "affected_chart_inference": "explicit chart scope or visible target value in the rendered data",
+      "expected_relation_edges_to_check": [],
+      "low_level_checks": [
+        "image_rendered",
+        "reference_line_present",
+        "line_style_and_label_match"
+      ],
+      "high_level_checks": [
+        "comparable_view_consistency",
+        "non_applicable_views_preserved"
+      ]
+    },
+    {
+      "operation_index": 2,
+      "operation": {
+        "operation": "set_y_scale",
+        "scale": "log",
+        "scope": "numeric_y_charts"
+      },
+      "touched_fields": [
+        "axis_scale",
+        "tick_labels",
+        "data_semantics"
+      ],
+      "expected_affected_charts": [
+        "chart_1",
+        "chart_2",
+        "chart_3"
+      ],
+      "affected_chart_inference": "operation scope targets charts with interpretable numeric y-axes",
+      "expected_relation_edges_to_check": [
+        {
+          "source": "chart_1",
+          "target": "chart_2",
+          "relations": [
+            "environment_monitoring_relation",
+            "shared_entity",
+            "shared_measure",
+            "shared_time_axis",
+            "source_epa_airdata",
+            "theme_air_quality_environment"
+          ]
+        },
+        {
+          "source": "chart_1",
+          "target": "chart_3",
+          "relations": [
+            "environment_monitoring_relation",
+            "shared_dataset",
+            "shared_entity",
+            "shared_measure",
+            "shared_time_axis",
+            "source_epa_airdata",
+            "theme_air_quality_environment"
+          ]
+        },
+        {
+          "source": "chart_2",
+          "target": "chart_3",
+          "relations": [
+            "environment_monitoring_relation",
+            "shared_entity",
+            "shared_measure",
+            "shared_time_axis",
+            "source_epa_airdata",
+            "theme_air_quality_environment"
+          ]
+        }
+      ],
+      "low_level_checks": [
+        "image_rendered",
+        "chart_count_preserved",
+        "no_gross_overlap",
+        "y_axis_scale_changed",
+        "tick_labels_consistent",
+        "positive_values_handled_correctly"
+      ],
+      "high_level_checks": [
+        "instruction_intent_satisfied",
+        "unrelated_charts_preserved",
+        "data_semantics_preserved_after_transform"
+      ]
+    },
+    {
+      "operation_index": 3,
+      "operation": {
+        "operation": "preserve_unrelated_charts",
+        "scope": "charts_not_in_dataset",
+        "dataset_id": "epa_annual_aqi_state"
+      },
+      "touched_fields": [
+        "non_target_charts",
+        "layout",
+        "visual_encoding"
+      ],
+      "expected_affected_charts": [],
+      "affected_chart_inference": "constraint operation; checks preservation outside the edited scope",
+      "expected_relation_edges_to_check": [],
+      "low_level_checks": [
+        "image_rendered",
+        "chart_count_preserved",
+        "no_gross_overlap",
+        "unrelated_chart_pixels_preserved",
+        "unrelated_labels_preserved",
+        "unrelated_data_encodings_preserved"
+      ],
+      "high_level_checks": [
+        "selective_editing_and_preservation",
+        "unrelated_charts_preserved"
+      ]
+    }
+  ],
+  "scoring_dimensions": {
+    "low_level": [
+      "render_validity",
+      "text_label_accuracy",
+      "visual_encoding_accuracy",
+      "data_transform_accuracy",
+      "annotation_accuracy",
+      "layout_readability",
+      "non_target_visual_preservation"
+    ],
+    "high_level": [
+      "instruction_intent_fidelity",
+      "relation_aware_consistency",
+      "selective_editing_and_preservation",
+      "multi_step_compositionality",
+      "data_semantic_plausibility",
+      "dashboard_coherence"
+    ]
+  },
+  "recommended_weights": {
+    "low_level_total": 0.55,
+    "high_level_total": 0.45,
+    "render_validity_gate": "score is zero if the output cannot be rendered"
+  },
+  "raw_instruction": "Add a purple mean reference line labeled \"Reference mean\" to chart_3; set the y-axis to a log scale for charts with numeric y-axes; and keep charts outside the specified scope unchanged.",
+  "expected_relation_edges_union": []
+}

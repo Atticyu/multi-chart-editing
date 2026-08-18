@@ -1,0 +1,21 @@
+{
+  "global_sample_id": "real/sample_000445",
+  "split": "real",
+  "sample_id": "sample_000445",
+  "dashboard_id": "dashboard_0030",
+  "domain": "owid",
+  "data_origin": "real",
+  "chart_count": 2,
+  "chart_types": "funnel;gantt",
+  "instruction_type": "multi_step",
+  "num_operations": 3,
+  "operations": "modify_color;rename_label;add_event_marker",
+  "instruction": "Within the related country or region panels, recolor Guinea to red. In the related country or region panels, replace the label Guinea with Guinea (updated). Mark 1925 with a red vertical line labeled \"Event 1925\" in all time-series panels. Make the scoped edits consistently across the related charts without disturbing the rest of the dashboard.",
+  "input_image": "real/input_only/samples/sample_000445/input_image.png",
+  "instruction_file": "real/input_only/samples/sample_000445/instruction.txt",
+  "target_code": "real/full/editing_samples/sample_000445/target_code.py",
+  "target_image": "real/full/editing_samples/sample_000445/target_image.png",
+  "source_dashboard_code": "real/full/base_dashboards/dashboard_0030/source_code.py",
+  "source_dashboard_image": "real/full/base_dashboards/dashboard_0030/input_image.png",
+  "raw_instruction": "Change Guinea to red in subplots linked by country_or_region_relation; rename Guinea to Guinea (updated) across subplots linked by country_or_region_relation; and add a red vertical marker at 1925 labeled \"Event 1925\" to all time-series charts. Make sure the edits are applied consistently across related subplots and unrelated subplots are preserved."
+}

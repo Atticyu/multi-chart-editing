@@ -1,0 +1,21 @@
+{
+  "global_sample_id": "synthetic/sample_920967",
+  "split": "synthetic",
+  "sample_id": "sample_920967",
+  "dashboard_id": "dashboard_aug_0442",
+  "domain": "agriculture_food",
+  "data_origin": "synthetic_relation_augmented_qc",
+  "chart_count": 2,
+  "chart_types": "line;heatmap",
+  "instruction_type": "complex_relation",
+  "num_operations": 3,
+  "operations": "add_dashboard_title;modify_color;preserve_data_values",
+  "instruction": "Add the title \"Agriculture Food Edited Dashboard\" and use red to emphasize North consistently across every subplot where that label appears.",
+  "input_image": "synthetic/input_only/samples/sample_920967/input_image.png",
+  "instruction_file": "synthetic/input_only/samples/sample_920967/instruction.txt",
+  "target_code": "synthetic/full/editing_samples/sample_920967/target_code.py",
+  "target_image": "synthetic/full/editing_samples/sample_920967/target_image.png",
+  "source_dashboard_code": "synthetic/full/base_dashboards/dashboard_aug_0442/source_code.py",
+  "source_dashboard_image": "synthetic/full/base_dashboards/dashboard_aug_0442/input_image.png",
+  "raw_instruction": "Add title and consistently emphasize shared label North."
+}

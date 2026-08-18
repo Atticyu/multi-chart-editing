@@ -1,0 +1,31 @@
+{
+  "instruction_type": "complex_relation",
+  "operations": [
+    {
+      "operation": "add_dashboard_title",
+      "title": "Agriculture Food Edited Dashboard",
+      "scope": "all_charts"
+    },
+    {
+      "operation": "modify_color",
+      "target": "North",
+      "color": "#DC2626",
+      "scope": "charts_where_label_appears"
+    },
+    {
+      "operation": "preserve_data_values",
+      "scope": "all_charts"
+    }
+  ],
+  "instruction": "Add the title \"Agriculture Food Edited Dashboard\" and use red to emphasize North consistently across every subplot where that label appears.",
+  "num_operations": 3,
+  "max_steps": 6,
+  "source_dashboard_id": "dashboard_aug_0442",
+  "sample_id": "sample_920967",
+  "scope_notes": [
+    "Augmented QC samples use visible-label edit targets.",
+    "Reference lines are restricted to standard numeric-y charts.",
+    "Relation-augmented samples are designed so one instruction often affects multiple semantically linked subplots."
+  ],
+  "raw_instruction": "Add title and consistently emphasize shared label North."
+}

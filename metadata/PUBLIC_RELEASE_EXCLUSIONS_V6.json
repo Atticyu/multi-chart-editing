@@ -1,0 +1,141 @@
+{
+  "excluded_dataset_ids": [
+    "vega_stocks"
+  ],
+  "affected_base_dashboards": [
+    {
+      "dashboard_id": "dashboard_0032",
+      "excluded_dataset_ids": [
+        "vega_stocks"
+      ]
+    },
+    {
+      "dashboard_id": "dashboard_0222",
+      "excluded_dataset_ids": [
+        "vega_stocks"
+      ]
+    }
+  ],
+  "affected_full_real_samples": [
+    {
+      "sample_id": "sample_000463",
+      "source_dashboard_id": "dashboard_0032",
+      "excluded_dataset_ids": [
+        "vega_stocks"
+      ]
+    },
+    {
+      "sample_id": "sample_000464",
+      "source_dashboard_id": "dashboard_0032",
+      "excluded_dataset_ids": [
+        "vega_stocks"
+      ]
+    },
+    {
+      "sample_id": "sample_000465",
+      "source_dashboard_id": "dashboard_0032",
+      "excluded_dataset_ids": [
+        "vega_stocks"
+      ]
+    },
+    {
+      "sample_id": "sample_000467",
+      "source_dashboard_id": "dashboard_0032",
+      "excluded_dataset_ids": [
+        "vega_stocks"
+      ]
+    },
+    {
+      "sample_id": "sample_000470",
+      "source_dashboard_id": "dashboard_0032",
+      "excluded_dataset_ids": [
+        "vega_stocks"
+      ]
+    },
+    {
+      "sample_id": "sample_003436",
+      "source_dashboard_id": "dashboard_0222",
+      "excluded_dataset_ids": [
+        "vega_stocks"
+      ]
+    },
+    {
+      "sample_id": "sample_003437",
+      "source_dashboard_id": "dashboard_0222",
+      "excluded_dataset_ids": [
+        "vega_stocks"
+      ]
+    },
+    {
+      "sample_id": "sample_003438",
+      "source_dashboard_id": "dashboard_0222",
+      "excluded_dataset_ids": [
+        "vega_stocks"
+      ]
+    },
+    {
+      "sample_id": "sample_003439",
+      "source_dashboard_id": "dashboard_0222",
+      "excluded_dataset_ids": [
+        "vega_stocks"
+      ]
+    },
+    {
+      "sample_id": "sample_003441",
+      "source_dashboard_id": "dashboard_0222",
+      "excluded_dataset_ids": [
+        "vega_stocks"
+      ]
+    },
+    {
+      "sample_id": "sample_003443",
+      "source_dashboard_id": "dashboard_0222",
+      "excluded_dataset_ids": [
+        "vega_stocks"
+      ]
+    },
+    {
+      "sample_id": "sample_003449",
+      "source_dashboard_id": "dashboard_0222",
+      "excluded_dataset_ids": [
+        "vega_stocks"
+      ]
+    },
+    {
+      "sample_id": "sample_003450",
+      "source_dashboard_id": "dashboard_0222",
+      "excluded_dataset_ids": [
+        "vega_stocks"
+      ]
+    }
+  ],
+  "fixed_test_membership": {
+    "test_100_fixed": [
+      {
+        "sample_id": "sample_000470",
+        "task_id": "real_sample_000470",
+        "dashboard_id": "dashboard_0032",
+        "chart_count": "2",
+        "instruction_type": "multi_step"
+      }
+    ],
+    "test_20_fixed": [],
+    "test_300_fixed": [
+      {
+        "sample_id": "sample_000470",
+        "task_id": "real_sample_000470",
+        "dashboard_id": "dashboard_0032",
+        "chart_count": "2",
+        "instruction_type": "multi_step"
+      },
+      {
+        "sample_id": "sample_003449",
+        "task_id": "real_sample_003449",
+        "dashboard_id": "dashboard_0222",
+        "chart_count": "7",
+        "instruction_type": "multi_step"
+      }
+    ]
+  },
+  "publication_action": "Exclude the unverified raw table and the listed dependent benchmark samples from the public archive, or replace the source with a clearly licensed equivalent and regenerate those samples. Existing frozen experiment results may be retained internally, but any paper table should disclose whether the two affected test_300_fixed tasks are included."
+}

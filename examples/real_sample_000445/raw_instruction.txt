@@ -1,0 +1,1 @@
+Change Guinea to red in subplots linked by country_or_region_relation; rename Guinea to Guinea (updated) across subplots linked by country_or_region_relation; and add a red vertical marker at 1925 labeled "Event 1925" to all time-series charts. Make sure the edits are applied consistently across related subplots and unrelated subplots are preserved.

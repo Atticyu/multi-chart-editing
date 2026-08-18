@@ -1,0 +1,1 @@
+Make the dashboard easier to compare: use dark blue subplot titles with light dashed gridlines, and rename the y-axis to "Comparable value" on the related numeric subplots.

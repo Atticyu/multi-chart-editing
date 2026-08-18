@@ -1,0 +1,1029 @@
+{
+  "sample_id": "sample_920915",
+  "source_dashboard_id": "dashboard_aug_0433",
+  "domain": "hospital_operations",
+  "chart_count": 5,
+  "instruction": "Make the dashboard easier to compare: use dark blue subplot titles with light dashed gridlines, and rename the y-axis to \"Comparable value\" on the related numeric subplots.",
+  "instruction_type": "complex_relation",
+  "num_operations": 5,
+  "figure_level_operations": [
+    "modify_style"
+  ],
+  "expected_affected_charts_union": [
+    "chart_1",
+    "chart_2",
+    "chart_3",
+    "chart_4",
+    "chart_5"
+  ],
+  "expected_preserved_charts": [],
+  "operation_labels": [
+    {
+      "operation_index": 1,
+      "operation": {
+        "operation": "modify_style",
+        "scope": "all_charts"
+      },
+      "touched_fields": [
+        "subplot_style",
+        "title_style",
+        "grid_style"
+      ],
+      "expected_affected_charts": [
+        "chart_1",
+        "chart_2",
+        "chart_3",
+        "chart_4",
+        "chart_5"
+      ],
+      "effective_relation_group": [
+        "chart_1",
+        "chart_2",
+        "chart_3",
+        "chart_4",
+        "chart_5"
+      ],
+      "affected_chart_inference": "operation applies to every subplot",
+      "expected_relation_edges_to_check": [
+        {
+          "source": "chart_1",
+          "target": "chart_2",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_1",
+          "target": "chart_3",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_1",
+          "target": "chart_4",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_1",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_2",
+          "target": "chart_3",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_2",
+          "target": "chart_4",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_2",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_3",
+          "target": "chart_4",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_3",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_4",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        }
+      ],
+      "low_level_checks": [
+        "image_rendered",
+        "style_properties_match",
+        "chart_count_preserved",
+        "no_gross_overlap"
+      ],
+      "high_level_checks": [
+        "global_visual_coherence",
+        "consistent_style_propagation"
+      ]
+    },
+    {
+      "operation_index": 2,
+      "operation": {
+        "operation": "change_axis_label",
+        "axis": "y",
+        "new_label": "Comparable value",
+        "scope": "chart_id",
+        "chart_id": "chart_1"
+      },
+      "touched_fields": [
+        "axis_label"
+      ],
+      "expected_affected_charts": [
+        "chart_1"
+      ],
+      "effective_relation_group": [
+        "chart_1",
+        "chart_2",
+        "chart_4",
+        "chart_5"
+      ],
+      "affected_chart_inference": "explicit chart_id in the edit program",
+      "expected_relation_edges_to_check": [
+        {
+          "source": "chart_1",
+          "target": "chart_2",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_1",
+          "target": "chart_3",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "preserve_non_applicable_endpoint"
+        },
+        {
+          "source": "chart_1",
+          "target": "chart_4",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_1",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_2",
+          "target": "chart_3",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "preserve_non_applicable_endpoint"
+        },
+        {
+          "source": "chart_2",
+          "target": "chart_4",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_2",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_3",
+          "target": "chart_4",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "preserve_non_applicable_endpoint"
+        },
+        {
+          "source": "chart_3",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "preserve_non_applicable_endpoint"
+        },
+        {
+          "source": "chart_4",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        }
+      ],
+      "low_level_checks": [
+        "image_rendered",
+        "axis_label_text_exact",
+        "axis_label_on_expected_chart"
+      ],
+      "high_level_checks": [
+        "relation_aware_propagation",
+        "semantic_axis_consistency"
+      ]
+    },
+    {
+      "operation_index": 3,
+      "operation": {
+        "operation": "change_axis_label",
+        "axis": "y",
+        "new_label": "Comparable value",
+        "scope": "chart_id",
+        "chart_id": "chart_2"
+      },
+      "touched_fields": [
+        "axis_label"
+      ],
+      "expected_affected_charts": [
+        "chart_2"
+      ],
+      "effective_relation_group": [
+        "chart_1",
+        "chart_2",
+        "chart_4",
+        "chart_5"
+      ],
+      "affected_chart_inference": "explicit chart_id in the edit program",
+      "expected_relation_edges_to_check": [
+        {
+          "source": "chart_1",
+          "target": "chart_2",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_1",
+          "target": "chart_3",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "preserve_non_applicable_endpoint"
+        },
+        {
+          "source": "chart_1",
+          "target": "chart_4",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_1",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_2",
+          "target": "chart_3",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "preserve_non_applicable_endpoint"
+        },
+        {
+          "source": "chart_2",
+          "target": "chart_4",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_2",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_3",
+          "target": "chart_4",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "preserve_non_applicable_endpoint"
+        },
+        {
+          "source": "chart_3",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "preserve_non_applicable_endpoint"
+        },
+        {
+          "source": "chart_4",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        }
+      ],
+      "low_level_checks": [
+        "image_rendered",
+        "axis_label_text_exact",
+        "axis_label_on_expected_chart"
+      ],
+      "high_level_checks": [
+        "relation_aware_propagation",
+        "semantic_axis_consistency"
+      ]
+    },
+    {
+      "operation_index": 4,
+      "operation": {
+        "operation": "change_axis_label",
+        "axis": "y",
+        "new_label": "Comparable value",
+        "scope": "chart_id",
+        "chart_id": "chart_4"
+      },
+      "touched_fields": [
+        "axis_label"
+      ],
+      "expected_affected_charts": [
+        "chart_4"
+      ],
+      "effective_relation_group": [
+        "chart_1",
+        "chart_2",
+        "chart_4",
+        "chart_5"
+      ],
+      "affected_chart_inference": "explicit chart_id in the edit program",
+      "expected_relation_edges_to_check": [
+        {
+          "source": "chart_1",
+          "target": "chart_2",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_1",
+          "target": "chart_3",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "preserve_non_applicable_endpoint"
+        },
+        {
+          "source": "chart_1",
+          "target": "chart_4",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_1",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_2",
+          "target": "chart_3",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "preserve_non_applicable_endpoint"
+        },
+        {
+          "source": "chart_2",
+          "target": "chart_4",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_2",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_3",
+          "target": "chart_4",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "preserve_non_applicable_endpoint"
+        },
+        {
+          "source": "chart_3",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "preserve_non_applicable_endpoint"
+        },
+        {
+          "source": "chart_4",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        }
+      ],
+      "low_level_checks": [
+        "image_rendered",
+        "axis_label_text_exact",
+        "axis_label_on_expected_chart"
+      ],
+      "high_level_checks": [
+        "relation_aware_propagation",
+        "semantic_axis_consistency"
+      ]
+    },
+    {
+      "operation_index": 5,
+      "operation": {
+        "operation": "change_axis_label",
+        "axis": "y",
+        "new_label": "Comparable value",
+        "scope": "chart_id",
+        "chart_id": "chart_5"
+      },
+      "touched_fields": [
+        "axis_label"
+      ],
+      "expected_affected_charts": [
+        "chart_5"
+      ],
+      "effective_relation_group": [
+        "chart_1",
+        "chart_2",
+        "chart_4",
+        "chart_5"
+      ],
+      "affected_chart_inference": "explicit chart_id in the edit program",
+      "expected_relation_edges_to_check": [
+        {
+          "source": "chart_1",
+          "target": "chart_2",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_1",
+          "target": "chart_3",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "preserve_non_applicable_endpoint"
+        },
+        {
+          "source": "chart_1",
+          "target": "chart_4",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_1",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_2",
+          "target": "chart_3",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "preserve_non_applicable_endpoint"
+        },
+        {
+          "source": "chart_2",
+          "target": "chart_4",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_2",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        },
+        {
+          "source": "chart_3",
+          "target": "chart_4",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "preserve_non_applicable_endpoint"
+        },
+        {
+          "source": "chart_3",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "preserve_non_applicable_endpoint"
+        },
+        {
+          "source": "chart_4",
+          "target": "chart_5",
+          "relations": [
+            "domain_hospital_operations",
+            "shared_theme",
+            "shared_visible_labels",
+            "synthetic_relation_augmented_qc"
+          ],
+          "expected_action": "propagate_edit"
+        }
+      ],
+      "low_level_checks": [
+        "image_rendered",
+        "axis_label_text_exact",
+        "axis_label_on_expected_chart"
+      ],
+      "high_level_checks": [
+        "relation_aware_propagation",
+        "semantic_axis_consistency"
+      ]
+    }
+  ],
+  "quality_notes": [
+    "Augmented sample generated after final QC.",
+    "Reference-line operations avoid nonstandard y-axis chart types.",
+    "Visible label edits target actual plotted labels."
+  ],
+  "expected_relation_edges_union": [
+    {
+      "source": "chart_1",
+      "target": "chart_2",
+      "relations": [
+        "domain_hospital_operations",
+        "shared_theme",
+        "shared_visible_labels",
+        "synthetic_relation_augmented_qc"
+      ],
+      "expected_action": "propagate_edit"
+    },
+    {
+      "source": "chart_1",
+      "target": "chart_3",
+      "relations": [
+        "domain_hospital_operations",
+        "shared_theme",
+        "shared_visible_labels",
+        "synthetic_relation_augmented_qc"
+      ],
+      "expected_action": "propagate_edit"
+    },
+    {
+      "source": "chart_1",
+      "target": "chart_4",
+      "relations": [
+        "domain_hospital_operations",
+        "shared_theme",
+        "shared_visible_labels",
+        "synthetic_relation_augmented_qc"
+      ],
+      "expected_action": "propagate_edit"
+    },
+    {
+      "source": "chart_1",
+      "target": "chart_5",
+      "relations": [
+        "domain_hospital_operations",
+        "shared_theme",
+        "shared_visible_labels",
+        "synthetic_relation_augmented_qc"
+      ],
+      "expected_action": "propagate_edit"
+    },
+    {
+      "source": "chart_2",
+      "target": "chart_3",
+      "relations": [
+        "domain_hospital_operations",
+        "shared_theme",
+        "shared_visible_labels",
+        "synthetic_relation_augmented_qc"
+      ],
+      "expected_action": "propagate_edit"
+    },
+    {
+      "source": "chart_2",
+      "target": "chart_4",
+      "relations": [
+        "domain_hospital_operations",
+        "shared_theme",
+        "shared_visible_labels",
+        "synthetic_relation_augmented_qc"
+      ],
+      "expected_action": "propagate_edit"
+    },
+    {
+      "source": "chart_2",
+      "target": "chart_5",
+      "relations": [
+        "domain_hospital_operations",
+        "shared_theme",
+        "shared_visible_labels",
+        "synthetic_relation_augmented_qc"
+      ],
+      "expected_action": "propagate_edit"
+    },
+    {
+      "source": "chart_3",
+      "target": "chart_4",
+      "relations": [
+        "domain_hospital_operations",
+        "shared_theme",
+        "shared_visible_labels",
+        "synthetic_relation_augmented_qc"
+      ],
+      "expected_action": "propagate_edit"
+    },
+    {
+      "source": "chart_3",
+      "target": "chart_5",
+      "relations": [
+        "domain_hospital_operations",
+        "shared_theme",
+        "shared_visible_labels",
+        "synthetic_relation_augmented_qc"
+      ],
+      "expected_action": "propagate_edit"
+    },
+    {
+      "source": "chart_4",
+      "target": "chart_5",
+      "relations": [
+        "domain_hospital_operations",
+        "shared_theme",
+        "shared_visible_labels",
+        "synthetic_relation_augmented_qc"
+      ],
+      "expected_action": "propagate_edit"
+    }
+  ],
+  "relation_graph_snapshot": {
+    "nodes": [
+      {
+        "chart_id": "chart_1",
+        "chart_type": "lollipop",
+        "relation_tags": [
+          "domain_hospital_operations",
+          "synthetic_relation_augmented_qc",
+          "shared_theme",
+          "shared_visible_labels"
+        ]
+      },
+      {
+        "chart_id": "chart_2",
+        "chart_type": "waterfall",
+        "relation_tags": [
+          "domain_hospital_operations",
+          "synthetic_relation_augmented_qc",
+          "shared_theme",
+          "shared_visible_labels"
+        ]
+      },
+      {
+        "chart_id": "chart_3",
+        "chart_type": "candlestick",
+        "relation_tags": [
+          "domain_hospital_operations",
+          "synthetic_relation_augmented_qc",
+          "shared_theme",
+          "shared_visible_labels"
+        ]
+      },
+      {
+        "chart_id": "chart_4",
+        "chart_type": "stacked_bar",
+        "relation_tags": [
+          "domain_hospital_operations",
+          "synthetic_relation_augmented_qc",
+          "shared_theme",
+          "shared_visible_labels"
+        ]
+      },
+      {
+        "chart_id": "chart_5",
+        "chart_type": "dot_plot",
+        "relation_tags": [
+          "domain_hospital_operations",
+          "synthetic_relation_augmented_qc",
+          "shared_theme",
+          "shared_visible_labels"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "source": "chart_1",
+        "target": "chart_2",
+        "relations": [
+          "domain_hospital_operations",
+          "shared_theme",
+          "shared_visible_labels",
+          "synthetic_relation_augmented_qc"
+        ]
+      },
+      {
+        "source": "chart_1",
+        "target": "chart_3",
+        "relations": [
+          "domain_hospital_operations",
+          "shared_theme",
+          "shared_visible_labels",
+          "synthetic_relation_augmented_qc"
+        ]
+      },
+      {
+        "source": "chart_1",
+        "target": "chart_4",
+        "relations": [
+          "domain_hospital_operations",
+          "shared_theme",
+          "shared_visible_labels",
+          "synthetic_relation_augmented_qc"
+        ]
+      },
+      {
+        "source": "chart_1",
+        "target": "chart_5",
+        "relations": [
+          "domain_hospital_operations",
+          "shared_theme",
+          "shared_visible_labels",
+          "synthetic_relation_augmented_qc"
+        ]
+      },
+      {
+        "source": "chart_2",
+        "target": "chart_3",
+        "relations": [
+          "domain_hospital_operations",
+          "shared_theme",
+          "shared_visible_labels",
+          "synthetic_relation_augmented_qc"
+        ]
+      },
+      {
+        "source": "chart_2",
+        "target": "chart_4",
+        "relations": [
+          "domain_hospital_operations",
+          "shared_theme",
+          "shared_visible_labels",
+          "synthetic_relation_augmented_qc"
+        ]
+      },
+      {
+        "source": "chart_2",
+        "target": "chart_5",
+        "relations": [
+          "domain_hospital_operations",
+          "shared_theme",
+          "shared_visible_labels",
+          "synthetic_relation_augmented_qc"
+        ]
+      },
+      {
+        "source": "chart_3",
+        "target": "chart_4",
+        "relations": [
+          "domain_hospital_operations",
+          "shared_theme",
+          "shared_visible_labels",
+          "synthetic_relation_augmented_qc"
+        ]
+      },
+      {
+        "source": "chart_3",
+        "target": "chart_5",
+        "relations": [
+          "domain_hospital_operations",
+          "shared_theme",
+          "shared_visible_labels",
+          "synthetic_relation_augmented_qc"
+        ]
+      },
+      {
+        "source": "chart_4",
+        "target": "chart_5",
+        "relations": [
+          "domain_hospital_operations",
+          "shared_theme",
+          "shared_visible_labels",
+          "synthetic_relation_augmented_qc"
+        ]
+      }
+    ],
+    "construction": "pairwise_shared_relation_tags"
+  },
+  "relation_label_version": "v2_explicit_scope_and_final_edge_actions",
+  "relation_label_provenance": {
+    "source": "deterministic reconstruction from target SPEC, DATASETS, and edit_program",
+    "edge_semantics": {
+      "propagate_edit": "both related endpoints are in the effective edit group",
+      "preserve_non_applicable_endpoint": "only one related endpoint is applicable"
+    }
+  }
+}

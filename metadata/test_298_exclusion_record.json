@@ -1,0 +1,7 @@
+{
+  "parent_test_count": 300,
+  "public_test_count": 298,
+  "excluded_task_count": 2,
+  "reason": "Dataset-specific redistribution permission for one upstream table could not be verified.",
+  "model_calls_rerun": false
+}

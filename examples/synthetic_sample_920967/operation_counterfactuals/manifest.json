@@ -1,0 +1,52 @@
+{
+  "version": "v3_operation_counterfactual",
+  "task_id": "synthetic_sample_920967",
+  "split": "synthetic",
+  "operation_count": 3,
+  "scorable_edit_operation_count": 2,
+  "valid_counterfactual_count": 2,
+  "all_edit_operations_valid": true,
+  "operations": [
+    {
+      "operation_index": 1,
+      "operation": "add_dashboard_title",
+      "operation_spec": {
+        "operation": "add_dashboard_title",
+        "title": "Agriculture Food Edited Dashboard",
+        "scope": "all_charts"
+      },
+      "applicable": true,
+      "counterfactual_image": "op_001_without.png",
+      "changed_pixel_rate": 0.1833347505668934,
+      "mean_absolute_delta": 17.203063586545728,
+      "valid_visual_effect": true,
+      "sha256": "e7f00aef919850a6356fc41a15605a9d08e6b0ee63b24ffb1682d073161c33b8"
+    },
+    {
+      "operation_index": 2,
+      "operation": "modify_color",
+      "operation_spec": {
+        "operation": "modify_color",
+        "target": "North",
+        "color": "#DC2626",
+        "scope": "charts_where_label_appears"
+      },
+      "applicable": true,
+      "counterfactual_image": "op_002_without.png",
+      "changed_pixel_rate": 0.0032100340136054424,
+      "mean_absolute_delta": 0.10628259637188209,
+      "valid_visual_effect": true,
+      "sha256": "f1aa0456a2b08704c40418286c31716bb84479f75d309bd4a893155c97646fe9"
+    },
+    {
+      "operation_index": 3,
+      "operation": "preserve_data_values",
+      "operation_spec": {
+        "operation": "preserve_data_values",
+        "scope": "all_charts"
+      },
+      "applicable": false,
+      "reason": "preservation operation is scored on the non-edit region"
+    }
+  ]
+}

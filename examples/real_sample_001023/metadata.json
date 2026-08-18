@@ -1,0 +1,21 @@
+{
+  "global_sample_id": "real/sample_001023",
+  "split": "real",
+  "sample_id": "sample_001023",
+  "dashboard_id": "dashboard_0068",
+  "domain": "air_quality_environment",
+  "data_origin": "real",
+  "chart_count": 3,
+  "chart_types": "scatter;strip_plot;dual_axis_line_bar",
+  "instruction_type": "multi_step",
+  "num_operations": 3,
+  "operations": "add_reference_line;set_y_scale;preserve_unrelated_charts",
+  "instruction": "Add a purple reference line labeled \"Reference mean\" at the mean value in the third subplot. For charts with numeric y-values, display the y-axis on a logarithmic scale. Leave charts outside that scope unchanged.",
+  "input_image": "real/input_only/samples/sample_001023/input_image.png",
+  "instruction_file": "real/input_only/samples/sample_001023/instruction.txt",
+  "target_code": "real/full/editing_samples/sample_001023/target_code.py",
+  "target_image": "real/full/editing_samples/sample_001023/target_image.png",
+  "source_dashboard_code": "real/full/base_dashboards/dashboard_0068/source_code.py",
+  "source_dashboard_image": "real/full/base_dashboards/dashboard_0068/input_image.png",
+  "raw_instruction": "Add a purple mean reference line labeled \"Reference mean\" to chart_3; set the y-axis to a log scale for charts with numeric y-axes; and keep charts outside the specified scope unchanged."
+}

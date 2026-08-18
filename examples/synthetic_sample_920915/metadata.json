@@ -1,0 +1,21 @@
+{
+  "global_sample_id": "synthetic/sample_920915",
+  "split": "synthetic",
+  "sample_id": "sample_920915",
+  "dashboard_id": "dashboard_aug_0433",
+  "domain": "hospital_operations",
+  "data_origin": "synthetic_relation_augmented_qc",
+  "chart_count": 5,
+  "chart_types": "lollipop;waterfall;candlestick;stacked_bar;dot_plot",
+  "instruction_type": "complex_relation",
+  "num_operations": 5,
+  "operations": "modify_style;change_axis_label;change_axis_label;change_axis_label;change_axis_label",
+  "instruction": "Make the dashboard easier to compare: use dark blue subplot titles with light dashed gridlines, and rename the y-axis to \"Comparable value\" on the related numeric subplots.",
+  "input_image": "synthetic/input_only/samples/sample_920915/input_image.png",
+  "instruction_file": "synthetic/input_only/samples/sample_920915/instruction.txt",
+  "target_code": "synthetic/full/editing_samples/sample_920915/target_code.py",
+  "target_image": "synthetic/full/editing_samples/sample_920915/target_image.png",
+  "source_dashboard_code": "synthetic/full/base_dashboards/dashboard_aug_0433/source_code.py",
+  "source_dashboard_image": "synthetic/full/base_dashboards/dashboard_aug_0433/input_image.png",
+  "raw_instruction": "Apply comparable styling and aligned numeric y-axis labels."
+}

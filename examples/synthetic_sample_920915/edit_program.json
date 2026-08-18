@@ -1,0 +1,48 @@
+{
+  "instruction_type": "complex_relation",
+  "operations": [
+    {
+      "operation": "modify_style",
+      "scope": "all_charts"
+    },
+    {
+      "operation": "change_axis_label",
+      "axis": "y",
+      "new_label": "Comparable value",
+      "scope": "chart_id",
+      "chart_id": "chart_1"
+    },
+    {
+      "operation": "change_axis_label",
+      "axis": "y",
+      "new_label": "Comparable value",
+      "scope": "chart_id",
+      "chart_id": "chart_2"
+    },
+    {
+      "operation": "change_axis_label",
+      "axis": "y",
+      "new_label": "Comparable value",
+      "scope": "chart_id",
+      "chart_id": "chart_4"
+    },
+    {
+      "operation": "change_axis_label",
+      "axis": "y",
+      "new_label": "Comparable value",
+      "scope": "chart_id",
+      "chart_id": "chart_5"
+    }
+  ],
+  "instruction": "Make the dashboard easier to compare: use dark blue subplot titles with light dashed gridlines, and rename the y-axis to \"Comparable value\" on the related numeric subplots.",
+  "num_operations": 5,
+  "max_steps": 6,
+  "source_dashboard_id": "dashboard_aug_0433",
+  "sample_id": "sample_920915",
+  "scope_notes": [
+    "Augmented QC samples use visible-label edit targets.",
+    "Reference lines are restricted to standard numeric-y charts.",
+    "Relation-augmented samples are designed so one instruction often affects multiple semantically linked subplots."
+  ],
+  "raw_instruction": "Apply comparable styling and aligned numeric y-axis labels."
+}

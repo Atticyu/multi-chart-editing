@@ -1,0 +1,180 @@
+{
+  "sample_id": "sample_000445",
+  "source_dashboard_id": "dashboard_0030",
+  "domain": "owid",
+  "chart_count": 2,
+  "instruction": "Within the related country or region panels, recolor Guinea to red. In the related country or region panels, replace the label Guinea with Guinea (updated). Mark 1925 with a red vertical line labeled \"Event 1925\" in all time-series panels. Make the scoped edits consistently across the related charts without disturbing the rest of the dashboard.",
+  "instruction_type": "multi_step",
+  "num_operations": 3,
+  "figure_level_operations": [],
+  "expected_affected_charts_union": [
+    "chart_1",
+    "chart_2"
+  ],
+  "expected_preserved_charts": [],
+  "operation_labels": [
+    {
+      "operation_index": 1,
+      "operation": {
+        "operation": "modify_color",
+        "target": "Guinea",
+        "color": "red",
+        "scope": "relation_tag",
+        "relation_tag": "country_or_region_relation"
+      },
+      "touched_fields": [
+        "color_encoding",
+        "legend_or_label"
+      ],
+      "expected_affected_charts": [
+        "chart_1",
+        "chart_2"
+      ],
+      "affected_chart_inference": "operation scope matches a relation tag",
+      "expected_relation_edges_to_check": [
+        {
+          "source": "chart_1",
+          "target": "chart_2",
+          "relations": [
+            "country_or_region_relation",
+            "shared_entity",
+            "shared_measure",
+            "shared_time_axis",
+            "source_owid",
+            "theme_owid"
+          ]
+        }
+      ],
+      "low_level_checks": [
+        "image_rendered",
+        "chart_count_preserved",
+        "no_gross_overlap",
+        "target_color_present",
+        "non_target_colors_preserved",
+        "legend_color_consistent"
+      ],
+      "high_level_checks": [
+        "instruction_intent_satisfied",
+        "unrelated_charts_preserved",
+        "relation_aware_propagation"
+      ]
+    },
+    {
+      "operation_index": 2,
+      "operation": {
+        "operation": "rename_label",
+        "target": "Guinea",
+        "new_label": "Guinea (updated)",
+        "scope": "relation_tag",
+        "relation_tag": "country_or_region_relation"
+      },
+      "touched_fields": [
+        "text_label",
+        "legend_or_label"
+      ],
+      "expected_affected_charts": [
+        "chart_1",
+        "chart_2"
+      ],
+      "affected_chart_inference": "operation scope matches a relation tag",
+      "expected_relation_edges_to_check": [
+        {
+          "source": "chart_1",
+          "target": "chart_2",
+          "relations": [
+            "country_or_region_relation",
+            "shared_entity",
+            "shared_measure",
+            "shared_time_axis",
+            "source_owid",
+            "theme_owid"
+          ]
+        }
+      ],
+      "low_level_checks": [
+        "image_rendered",
+        "chart_count_preserved",
+        "no_gross_overlap",
+        "old_label_removed_or_deemphasized",
+        "new_label_present",
+        "label_consistent_across_related_charts"
+      ],
+      "high_level_checks": [
+        "instruction_intent_satisfied",
+        "unrelated_charts_preserved",
+        "relation_aware_propagation"
+      ]
+    },
+    {
+      "operation_index": 3,
+      "operation": {
+        "operation": "add_event_marker",
+        "x": 1925,
+        "label": "Event 1925",
+        "color": "red",
+        "scope": "time_series_charts"
+      },
+      "touched_fields": [
+        "annotation",
+        "time_axis"
+      ],
+      "expected_affected_charts": [
+        "chart_2"
+      ],
+      "affected_chart_inference": "operation scope targets time-series charts",
+      "expected_relation_edges_to_check": [
+        {
+          "source": "chart_1",
+          "target": "chart_2",
+          "relations": [
+            "country_or_region_relation",
+            "shared_entity",
+            "shared_measure",
+            "shared_time_axis",
+            "source_owid",
+            "theme_owid"
+          ]
+        }
+      ],
+      "low_level_checks": [
+        "image_rendered",
+        "chart_count_preserved",
+        "no_gross_overlap",
+        "event_marker_present",
+        "event_label_present",
+        "marker_position_correct"
+      ],
+      "high_level_checks": [
+        "instruction_intent_satisfied",
+        "unrelated_charts_preserved",
+        "relation_aware_propagation",
+        "annotation_semantically_grounded"
+      ]
+    }
+  ],
+  "scoring_dimensions": {
+    "low_level": [
+      "render_validity",
+      "text_label_accuracy",
+      "visual_encoding_accuracy",
+      "data_transform_accuracy",
+      "annotation_accuracy",
+      "layout_readability",
+      "non_target_visual_preservation"
+    ],
+    "high_level": [
+      "instruction_intent_fidelity",
+      "relation_aware_consistency",
+      "selective_editing_and_preservation",
+      "multi_step_compositionality",
+      "data_semantic_plausibility",
+      "dashboard_coherence"
+    ]
+  },
+  "recommended_weights": {
+    "low_level_total": 0.55,
+    "high_level_total": 0.45,
+    "render_validity_gate": "score is zero if the output cannot be rendered"
+  },
+  "raw_instruction": "Change Guinea to red in subplots linked by country_or_region_relation; rename Guinea to Guinea (updated) across subplots linked by country_or_region_relation; and add a red vertical marker at 1925 labeled \"Event 1925\" to all time-series charts. Make sure the edits are applied consistently across related subplots and unrelated subplots are preserved."
+}
